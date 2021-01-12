@@ -1,6 +1,6 @@
 ## Egg
 
-A salmon mother can typically lay up to several thousand eggs in her nest, which a called a "redd". The redds are situated in gravel at the bottom of streams. The salmon eggs are about a cm in diameter and transparent red in color ad transparent, with the developing baby salmon observable from outside, especially the dark eye-spots. Eggs will hatch within eight to twenty-weeks depending on the salmon species and environmental conditions, such as temperature and the oxygen content in the stream water.
+A salmon mother can typically lay up to several thousand eggs in her nest, which a called a "redd". The redds are situated in gravel at the bottom of streams. The salmon eggs are about a half centimeter in diameter and transparent red in color ad transparent, with the developing baby salmon observable from outside, especially the dark eye-spots. Eggs will hatch within eight to twenty-weeks depending on the salmon species and environmental conditions, such as temperature and the oxygen content in the stream water.
 
 
 ## Alevin
@@ -26,5 +26,8 @@ When smolt are mature, they become adult or "post-smolt" salmon and migrate out 
 
 ##References
 U.S. Fish and Wildlife
+- https://www.fws.gov/refuge/togiak/wildlife_and_habitat/fish/salmon_lifecycle.html#:~:text=Egg,vary%20for%20the%20different%20species.
 
 Wikipedia
+- https://en.wikipedia.org/wiki/Salmon#Life_cycle
+- https://en.wikipedia.org/wiki/Juvenile_fish#Juvenile_salmon
