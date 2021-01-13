@@ -27,19 +27,21 @@ ui <- fluidPage(
                                                       "9-19 weeks"= "parr", "20-40 weeks"= "smolt", "> 40 weeks"="adult" )),
  
             hr(),
-            helpText("Images from WikiCommons")
+            helpText("References: U.S. Fish and Wildlife & Wikipedia"),
+            helpText("Images from Wikimedia Commons")
         ),
             
         # Show a plot of the generated distribution
         mainPanel(
             (h4("Your baby is:")),
             textOutput("text"),
-            imageOutput("image")
+            imageOutput("image"), hr(),
+            textOutput("text2")
         )
     )
 )
 
-# Define server logic required to draw a histogram
+# Define server logic 
 server <- function(input, output, session) {
     output$image <- renderImage({
         if (is.null(input$weeks))
@@ -122,6 +124,37 @@ server <- function(input, output, session) {
             
         } else if (input$weeks == "adult") {
             return("An adult salmon")
+            
+        }
+        
+    })
+    
+    output$text2 <- renderText({
+        if (is.null(input$weeks))
+            return(NULL)
+        
+        if (input$weeks == "egg") {
+            return("A salmon mother can typically lay up to several thousand eggs in her nest, which a called a redd. The redds are situated in gravel at the bottom of streams. The salmon eggs are about a half centimeter in diameter and transparent red in color ad transparent, with the developing baby salmon observable from outside, especially the dark eye-spots. Eggs will hatch within eight to twenty-weeks depending on the salmon species and environmental conditions, such as temperature and the oxygen content in the stream water.")
+        }    
+        
+        if (input$weeks == "alevin") {
+            return("After a baby salmon hatches from its egg, it is called an alevin, or a sac-fry. Alevin still have large, visible yolk sacs attached to their bellies, which is where their alternative name comes from. These very young salmon babies stay in their redd (nest) and rely on their yolk sac for nutrition. Baby salmon remain in the nest as alevin for just three to six weeks.")
+        }
+        
+        if (input$weeks == "fry") {
+            return("As baby salmon mature and use up their yolk-sacs, they will begin to swim up through the gravel making up the redd (nest) and start darting out into the overlying water to catch prey. At this point, they transition to being fry. Fry remain in their natal stream and feed primarily on insects but will also eat other invertebrates and plankton.")
+        }
+        
+        if (input$weeks == "parr") {
+            return("Baby salmon fry quickly develop parr marks or dark bars and spots along their sides that help keep them camouflaged in the stream environment. As fry develop these new markings, they become parr. Parr will usually remain in their home stream for one to three years.")
+        }
+        
+        if (input$weeks == "smolt") {
+            return("Baby salmon Parr experience many morphological and physiological changes as they become smolt - a process known as smoltification. During smoltification, baby salmon lose their parr marks and become darker on their backs, lighter on their bellies, and silvery on their sides. This coloration pattern, known as counter-shading, will help the salmon stay camouflaged in the open ocean and is a common coloration pattern for marine fish. In addition to the salmon's colors changing to prepare them for the ocean, the kidneys and and gills also change during smoltification so that they be able to survive in salt water. The smolt move away from their natal streams, but they do not head out to sea just yet. Smolt reside in the brackish waters of estuaries and tidal creeks for two to three years where they eat small fish, insects, crustaceans, and mollusks.")
+            
+            
+        } else if (input$weeks == "adult") {
+            return("When smolt are mature, they become adult (or post-smolt) salmon and migrate out to sea. Young adult salmon may live together in schools and inhabit deep waters where they hunt fish and crustaceans. Adult salmon do most of their feeding and growing at sea. After four to six years, salmon undergo another transition to reproductive maturity and will make their way back to their home stream to make nests and start the next generation of salmon.")
             
         }
         
