@@ -1,10 +1,12 @@
-name: babysalmon
-title:
+name: BabySalmon
+title: BabySalmon
 username:
 account: brisbin
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3421251
-bundleId: 4013491
+bundleId: 4314250
 url: https://brisbin.shinyapps.io/babysalmon/
-when: 1608518525.61415
+when: 1615171180.97611
+asMultiple: FALSE
+asStatic: FALSE
